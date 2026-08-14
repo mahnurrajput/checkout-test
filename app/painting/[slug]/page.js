@@ -1,5 +1,9 @@
+// app/painting/[slug]/page.js
 import { supabase } from '../../../lib/supabase';
 import { notFound } from 'next/navigation';
+
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 export default async function PaintingPage({ params }) {
   const { slug } = params;
@@ -16,8 +20,6 @@ export default async function PaintingPage({ params }) {
   if (error || !painting) {
     notFound();
   }
-
-  
 
   const isAvailable = painting.status === 'AVAILABLE';
 
@@ -45,9 +47,20 @@ export default async function PaintingPage({ params }) {
       {painting.description && <p>{painting.description}</p>}
 
       {isAvailable ? (
-        <button style={{ padding: '0.75rem 1.5rem', fontSize: '1rem' }}>
+        <a
+          href={`/book/${painting.slug}`}
+          style={{
+            display: 'inline-block',
+            padding: '0.75rem 1.5rem',
+            fontSize: '1rem',
+            background: '#222',
+            color: '#fff',
+            borderRadius: 6,
+            textDecoration: 'none',
+          }}
+        >
           Book This Painting
-        </button>
+        </a>
       ) : (
         <button disabled style={{ padding: '0.75rem 1.5rem', fontSize: '1rem' }}>
           {painting.status === 'SOLD' ? 'Sold' : 'Reserved'}
