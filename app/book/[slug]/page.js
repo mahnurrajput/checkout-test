@@ -70,9 +70,9 @@ export default async function BookPage({ params }) {
             Request this piece
           </h1>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink-soft">
-            There is no cart and no card payment here. Send your details and the artist
-            will reply personally on WhatsApp or by phone to confirm the piece, the total
-            with delivery, and how you would like to pay.
+            There is no cart and no card payment here. Send your details and our team will 
+            get back to you on WhatsApp or by phone to confirm the piece, the total with 
+            delivery, and how you would like to pay.
           </p>
 
           <BookingForm slug={painting.slug} />
@@ -109,8 +109,8 @@ export default async function BookPage({ params }) {
               </div>
             </div>
             <p className="mt-6 border-t border-line pt-5 text-xs leading-relaxed text-ink-soft">
-              Sending a request does not complete a sale. The piece stays listed until the
-              artist confirms with you.
+              Sending a request does not complete a sale. The piece stays listed until our 
+              team confirms with you.
             </p>
           </div>
         </aside>

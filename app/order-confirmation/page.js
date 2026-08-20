@@ -20,9 +20,8 @@ export default function OrderConfirmationPage({ searchParams }) {
           Your request has been received
         </h1>
         <p className="mt-4 max-w-md text-[15px] leading-relaxed text-ink-soft">
-          The artist has your details and will contact you personally on WhatsApp or by
-          phone to confirm the painting, the total with delivery, and payment. Expect a
-          reply within a day.
+          Our team has received your details and will contact you on WhatsApp or by phone to 
+          confirm the painting, the total with delivery, and payment. Expect a reply within a day.
         </p>
       </div>
 

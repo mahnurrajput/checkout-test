@@ -151,7 +151,7 @@ export default async function PaintingPage({ params }) {
               )}
               <p className="mt-3 text-xs leading-relaxed text-ink-faint">
                 {available
-                  ? 'A request, not an instant purchase — the artist confirms availability and delivery with you personally.'
+                  ? 'A request, not an instant purchase — our team will confirm availability and delivery details with you directly.'
                   : 'Ask about commissioning something similar, or see what is currently available.'}
               </p>
               {!available && (
