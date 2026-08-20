@@ -1,0 +1,40 @@
+/* app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Below this line: custom global styles, ported from the Magic Patterns
+   index.css. Font loading is NOT here — fonts are loaded via next/font
+   in app/layout.js instead, which self-hosts them (faster, no external
+   Google Fonts request, no layout shift). */
+
+:root {
+  --paper: #faf6f0;
+  --paper-deep: #f2ece3;
+  --ink: #211d19;
+  --ink-soft: #5d554b;
+  --line: #e2d9cc;
+  --gold: #9a6f2c;
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #eadfcc;
+  color: var(--ink);
+}
+
+.hairline {
+  background-image: linear-gradient(to right, transparent, var(--line), transparent);
+}
